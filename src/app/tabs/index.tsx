@@ -1,4 +1,4 @@
-import { View, Text, TextInput, Button, FlatList, Alert } from "react-native";
+import { View, Text, TextInput, Button, FlatList, Alert, ToastAndroid } from "react-native";
 import { useState } from "react";
 
 interface Task{
@@ -43,6 +43,7 @@ const Tasks=()=>{
             description:""
         })
 
+        return ToastAndroid.showWithGravityAndOffset("Task added", ToastAndroid.LONG, ToastAndroid.CENTER, 2,2)
     }
 
 
